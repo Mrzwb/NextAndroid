@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.zwb.next"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('nextconfig.jks')
+            storePassword 'zwb123'
+            keyPassword 'zwb@123'
+            keyAlias = 'gaodeconfig'
+        }
+        release {
+            storeFile file('nextconfig.keystore')
+            keyAlias 'next'
+            keyPassword 'xxxx'
+            storePassword 'xxxx'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    // UI
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    // 使用aar包时使用此种方式
+    // implementation (name:'AMapLocation_4.5.0_20190122', ext:'aar')
+}
