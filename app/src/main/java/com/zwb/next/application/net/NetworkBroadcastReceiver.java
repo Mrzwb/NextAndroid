@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-public class NetworkReceiver extends BroadcastReceiver {
+public class NetworkBroadcastReceiver extends BroadcastReceiver {
 
     private static final String TAG = "T_Receiver_Network";
 

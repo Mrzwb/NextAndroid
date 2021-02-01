@@ -8,7 +8,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.zwb.next.application.net.NetworkReceiver;
+import com.zwb.next.application.net.NetworkBroadcastReceiver;
 
 import androidx.fragment.app.FragmentActivity;
 
@@ -33,7 +33,7 @@ public class NetworkActivity extends FragmentActivity {
     public static String sPref = null;
 
     // The BroadcastReceiver that tracks network connectivity changes.
-    private NetworkReceiver receiver = new NetworkReceiver();
+    private NetworkBroadcastReceiver receiver = new NetworkBroadcastReceiver();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class NetworkActivity extends FragmentActivity {
 
         // Registers BroadcastReceiver to track network connection changes.
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        receiver = new NetworkReceiver();
+        receiver = new NetworkBroadcastReceiver();
         this.registerReceiver(receiver, filter);
 
     }

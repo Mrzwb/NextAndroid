@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sample-list>
+    <sample>
+        <id>1</id>
+        <title>示例-网络</title>
+        <desc>网络示例，网络状态变更</desc>
+        <activity>com.zwb.next.activities.NetworkActivity</activity>
+    </sample>
+    <sample>
+        <id>2</id>
+        <title>示例-文件</title>
+        <desc>文件操作,存储文件展示</desc>
+        <activity>com.zwb.next.activities.FilesActivity</activity>
+    </sample>
+    <sample>
+        <id>3</id>
+        <title>示例-滚动视图</title>
+        <desc>可滚动视图</desc>
+        <activity>com.zwb.next.activities.ScrollingActivity</activity>
+    </sample>
+    <sample>
+        <id>4</id>
+        <title>示例-系统配置</title>
+        <desc>系统配置</desc>
+        <activity>com.zwb.next.activities.SettingsActivity</activity>
+    </sample>
+</sample-list>
+
+
+
