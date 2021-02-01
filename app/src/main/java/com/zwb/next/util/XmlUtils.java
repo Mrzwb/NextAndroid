@@ -42,7 +42,6 @@ public final class XmlUtils {
                         break;
                     case XmlPullParser.END_TAG:
                         tag = parser.getName();
-                        Log.d(">>", tag);
                         xmlParser.dealWithEndTag(tag);
                         break;
                     default:
