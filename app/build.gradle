@@ -52,3 +52,15 @@ dependencies {
     // 使用aar包时使用此种方式
     // implementation (name:'AMapLocation_4.5.0_20190122', ext:'aar')
 }
+
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == "androidx.appcompat") {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion "1.+"
+            }
+        }
+    }
+}

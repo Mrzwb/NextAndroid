@@ -21,7 +21,7 @@ public final class SharePreferenceUtils {
     }
 
     public static void saveBool(Context context, String key, boolean val) {
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(key, val).commit();
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(key, val).apply();
     }
 
     public static boolean getBool(Context context, String key) {

@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import androidx.annotation.RequiresApi;
+
 /**
  * 剪切板操作
  *
@@ -32,6 +34,7 @@ public class Clipboard {
         clipboard.setPrimaryClip(clip);
     }
 
+    @RequiresApi(28)
     public static void clearClips(Context context) {
         ClipboardManager clipboard = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
         clipboard.clearPrimaryClip();

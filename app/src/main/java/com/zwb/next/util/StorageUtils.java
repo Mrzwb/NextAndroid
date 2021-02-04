@@ -16,18 +16,14 @@ import static android.os.storage.StorageManager.ACTION_MANAGE_STORAGE;
 
 public class StorageUtils {
 
-    private static Context mContext;
+    private final Context mContext;
 
-    private StorageUtils() {
-    }
-
-    private static class InstanceHolder {
-        static StorageUtils instance = new StorageUtils();
+    private StorageUtils(Context context) {
+        mContext = context;
     }
 
     public static StorageUtils getInstance(Context context) {
-        mContext = context;
-        return InstanceHolder.instance;
+        return new StorageUtils(context);
     }
 
     public String getFile()  {

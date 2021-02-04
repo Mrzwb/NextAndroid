@@ -20,7 +20,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
         super.onResume();
 
         // Registers a listener whenever a key changes
-        getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+        //getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
         // Unregisters the listener set in onResume().
         // It's best practice to unregister listeners when your app isn't using them to cut down on
         // unnecessary system overhead. You do this in onPause().
-        getPreferenceScreen().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
+       // getPreferenceScreen().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
     }
 
     // When the user changes the preferences selection,

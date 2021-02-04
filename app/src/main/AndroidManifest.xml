@@ -6,11 +6,15 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 通话权限 -->
-    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 闹钟权限 -->
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" /> <!-- 外部存储权限 -->
+    <!-- 通话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 闹钟权限 -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <!-- 外部存储权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 唤醒权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="false"
@@ -25,14 +29,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activities.SampleListActivity" />
+        <activity android:name=".activities.SamplePagerActivity" />
+
         <activity
             android:name=".activities.FilesActivity"
-            android:label="我的文件"></activity>
+            android:label="文件示例"></activity>
+        <activity
+            android:name=".activities.NetworkActivity"
+            android:label="网络示例"></activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="设置示例"></activity>
+        <activity
+            android:name=".activities.DatePickerActivity"
+            android:label="日期示例"></activity>
         <activity
             android:name=".activities.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".activities.SampleListActivity" />
+
+
         <!-- 文件提供器 android 7.0+ -->
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -1,5 +1,7 @@
 package com.zwb.next;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
@@ -11,6 +13,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
 import com.zwb.next.activities.FilesActivity;
@@ -21,6 +24,7 @@ import com.zwb.next.application.systemui.FullScreenActivity;
 import com.zwb.next.util.NetworkUtils;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
 public class MainActivity extends FullScreenActivity implements View.OnClickListener {
 
@@ -75,21 +79,13 @@ public class MainActivity extends FullScreenActivity implements View.OnClickList
         NotificationDirector director = new NotificationDirector(MainActivity.this);
         Notification notification = director.newNotification(null,"版本通知升级>>>>");
 
-       // director.notify(notification);
-
-        //director.notify(notification);
-
-        //director.notify(notification);
-
-
-
 
         //Intent intent = new Intent(this, ScrollingActivity.class);
         //startActivity(intent);
 
 
-        Intent intent = new Intent(this, SampleListActivity.class);
-        startActivity(intent);
+         Intent intent = new Intent(this, SampleListActivity.class);
+         startActivity(intent);
        // finish();
 
        // MapUtils.startAMapNav(this);
@@ -97,7 +93,14 @@ public class MainActivity extends FullScreenActivity implements View.OnClickList
         //MapUtils.startBMapNav(this);
 
 
-        sendBroadcast(new Intent("com.zwb.next.action"));
+        //sendBroadcast(new Intent("com.zwb.next.action"));
+
+
+//        DatePicker dp = new DatePicker(this);
+//         new AlertDialog.Builder(this)
+//                .setTitle("日期选择")
+//                .setView(dp)
+//                .setPositiveButton("OK",null).create().show();
 
     }
 
