@@ -16,5 +16,6 @@
     external-cache-path： Context.getExternalCacheDir(String)
     -->
     <external-path name="download" path="" />
+
 </paths>
 </resources> 

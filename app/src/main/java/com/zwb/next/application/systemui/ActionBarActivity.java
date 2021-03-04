@@ -1,7 +1,6 @@
 package com.zwb.next.application.systemui;
 
 import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;

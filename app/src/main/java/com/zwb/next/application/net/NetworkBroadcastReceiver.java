@@ -7,7 +7,7 @@ import android.util.Log;
 
 public class NetworkBroadcastReceiver extends BroadcastReceiver {
 
-    private static final String TAG = "T_Receiver_Network";
+    private static final String TAG = NetworkBroadcastReceiver.class.getSimpleName();
 
     @Override
     public void onReceive(Context context, Intent intent) {

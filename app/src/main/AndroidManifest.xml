@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zwb.next">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.zwb.next">
+
+    <!-- 申明依赖相机 -->
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -50,6 +52,9 @@
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
+        <activity android:name=".application.camera.CameraActivity"></activity>
+        <activity android:name=".activities.ContactsActivity"></activity>
+        <activity android:name=".activities.WebViewActivity"></activity>
 
         <!-- 文件提供器 android 7.0+ -->
         <provider

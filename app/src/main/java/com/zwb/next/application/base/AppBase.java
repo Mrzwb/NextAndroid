@@ -1,8 +1,7 @@
-package com.zwb.next.util;
+package com.zwb.next.application.base;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.provider.AlarmClock;
 import android.provider.Settings;
@@ -10,7 +9,7 @@ import android.provider.Settings;
 /**
  * @author zhouwb
  */
-public class AppUtils {
+public class AppBase extends AbstractApp {
 
     /**
      * 启动应用的设置
@@ -57,17 +56,6 @@ public class AppUtils {
         if (isIntentSafe(context, intent)) {
             context.startActivity(intent);
         }
-    }
-
-    /**
-     * 验证可接收的Intent应用
-     * @param context
-     * @param intent
-     * @return
-     */
-    private static boolean isIntentSafe(Context context, Intent intent) {
-        PackageManager packageManager = context.getPackageManager();
-        return intent.resolveActivity(packageManager) != null;
     }
 
 }

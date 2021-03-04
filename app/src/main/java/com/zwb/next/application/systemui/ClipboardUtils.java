@@ -13,7 +13,7 @@ import androidx.annotation.RequiresApi;
  *
  * @author zhouwb
  */
-public class Clipboard {
+public class ClipboardUtils {
 
     public static void clipFromText(Context context, String label, String text) {
         ClipboardManager clipboard = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);

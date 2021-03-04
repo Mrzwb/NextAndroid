@@ -36,6 +36,24 @@
         <desc>日期挂件</desc>
         <activity>com.zwb.next.activities.DatePickerActivity</activity>
     </sample>
+    <sample>
+        <id>07</id>
+        <title>示例-简单拍照</title>
+        <desc>调用系统拍照，非camera api使用</desc>
+        <activity>com.zwb.next.application.camera.CameraActivity</activity>
+    </sample>
+    <sample>
+        <id>08</id>
+        <title>示例-联系人</title>
+        <desc>通讯录联系人</desc>
+        <activity>com.zwb.next.activities.ContactsActivity</activity>
+    </sample>
+    <sample>
+        <id>09</id>
+        <title>示例-浏览器</title>
+        <desc>浏览器</desc>
+        <activity>com.zwb.next.activities.WebViewActivity</activity>
+    </sample>
 </sample-list>
 
 

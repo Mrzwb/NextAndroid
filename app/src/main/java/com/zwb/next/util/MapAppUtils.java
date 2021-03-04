@@ -11,7 +11,7 @@ import android.widget.Toast;
  *
  * @author zhouwb
  */
-public final class MapUtils {
+public final class MapAppUtils {
 
     /**
      * 唤起高德路径规划

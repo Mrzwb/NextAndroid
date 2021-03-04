@@ -21,10 +21,12 @@ import com.zwb.next.activities.SampleListActivity;
 import com.zwb.next.application.net.NetworkBroadcastReceiver;
 import com.zwb.next.application.notification.NotificationDirector;
 import com.zwb.next.application.systemui.FullScreenActivity;
+import com.zwb.next.util.MapAppUtils;
 import com.zwb.next.util.NetworkUtils;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
+import androidx.loader.content.Loader;
 
 public class MainActivity extends FullScreenActivity implements View.OnClickListener {
 
@@ -34,7 +36,6 @@ public class MainActivity extends FullScreenActivity implements View.OnClickList
 
     static {
         activityMap.put("atc_files",FilesActivity.class);
-
     }
 
     @Override
@@ -63,7 +64,6 @@ public class MainActivity extends FullScreenActivity implements View.OnClickList
 //        Intent intent = new Intent();
 //        intent.setClass(this, activityMap.get("atc_files"));
 //        startActivity(intent);
-
         boolean isOnline = NetworkUtils.isNetworkAvailable(MainActivity.this);
         boolean isWifi = NetworkUtils.isWifiConnection(MainActivity.this);
         boolean isGPRS = NetworkUtils.isCellularConnection(MainActivity.this);
@@ -83,17 +83,14 @@ public class MainActivity extends FullScreenActivity implements View.OnClickList
         //Intent intent = new Intent(this, ScrollingActivity.class);
         //startActivity(intent);
 
-
          Intent intent = new Intent(this, SampleListActivity.class);
          startActivity(intent);
        // finish();
 
-       // MapUtils.startAMapNav(this);
-
-        //MapUtils.startBMapNav(this);
+       // MapAppUtils.startAMapPath(this);
 
 
-        //sendBroadcast(new Intent("com.zwb.next.action"));
+        sendBroadcast(new Intent("com.zwb.next.action"));
 
 
 //        DatePicker dp = new DatePicker(this);
